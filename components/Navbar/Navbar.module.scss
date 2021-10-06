@@ -1,0 +1,29 @@
+.Navbar {
+  height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 95% 1fr;
+  align-items: center;
+  padding: 10px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 90% 1fr;
+  }
+}
+
+.LogoPokeApp {
+  display: flex;
+  justify-content: center;
+}
+
+.PokeNumFavorites {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding-right: 10px;
+}
+
+.Img {
+  max-width: 160px;
+  height: auto;
+}

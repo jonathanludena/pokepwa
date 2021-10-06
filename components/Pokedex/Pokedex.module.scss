@@ -1,0 +1,25 @@
+.Pokedex {
+  padding: 20px;
+}
+
+.Header {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,43 @@
+.Buscador {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.FormBuscador {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 700px) {
+    padding: 0 20px;
+  }
+}
+
+.inputSearch {
+  border: 1px solid #bebebe;
+  padding: 10px 10px;
+  border-radius: 10px 0 0 10px;
+  width: 40%;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.BtnSearchBtn {
+  border-radius: 0 10px 10px 0;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  background-color: #363636;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #4b4b4b;
+  }
+}

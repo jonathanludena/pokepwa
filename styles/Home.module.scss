@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap");
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.wallpapersafari.com%2F55%2F44%2FtvlMso.jpg&f=1&nofb=1");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    // z-index: 0;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  input,
+  a,
+  select {
+    outline: none;
+    text-decoration: none;
+    font-family: inherit;
+  }
+
+  @media screen and (max-width: 1000px) {
+    overflow-y: auto;
+    background: #fff;
+
+    &::before {
+      background-image: none;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    overflow-y: auto;
+    background: #fff;
+
+    &::before {
+      background-image: none;
+    }
+  }
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.NotFoundText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  font-size: 2rem;
+  color: #727171;
+}
