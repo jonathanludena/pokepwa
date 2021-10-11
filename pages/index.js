@@ -44,23 +44,30 @@ export default function Home() {
   };
 
   // SW
-  useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", function () {
-        navigator.serviceWorker.register("/sw.js").then(
-          function (registration) {
-            console.log(
-              "Service Worker registration successful with scope: ",
-              registration.scope
-            );
-          },
-          function (err) {
-            console.log("Service Worker registration failed: ", err);
-          }
-        );
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if ("serviceWorker" in navigator) {
+  //     window.addEventListener("load", function () {
+  //       navigator.serviceWorker.register("/sw.js").then(
+  //         function (registration) {
+  //           console.log(
+  //             "Service Worker registration successful with scope: ",
+  //             registration.scope
+  //           );
+
+  //           // NOTIFICACIONES
+  //           // Notification.requestPermission().then((result) => {
+  //           //   console.log(result);
+
+  //           //   registration.showNotification("Hola Mundo");
+  //           // });
+  //         },
+  //         function (err) {
+  //           console.log("Service Worker registration failed: ", err);
+  //         }
+  //       );
+  //     });
+  //   }
+  // }, []);
 
   useEffect(() => {
     loadFavoritesPokemon();
@@ -117,6 +124,9 @@ export default function Home() {
         <title>PokeApp</title>
         <meta name="description" content="PokeApp - SW" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <meta name="theme-color" content="#fff" />
       </Head>
 
       <main className={styles.main}>
